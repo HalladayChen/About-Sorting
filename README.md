@@ -43,16 +43,17 @@ output_file則作為檔名為'多媒體相關的研討會'的csv檔。<br>
 ## About Excel files Sorting
 有關sorting的部分會包含以下幾種演算法：<br><br>
 __1. trimspace__ <br>
-    當我們在讀取所轉好的csv檔時，資料載入後有時會出現空格。因此我們利用trimspace將空格清出。演算法如下：<br><br>
+當我們在讀取所轉好的csv檔時，資料載入後有時會出現空格。因此我們利用trimspace將空格清出。演算法如下：<br><br>
 ![圖六](https://github.com/HalladayChen/About-Sorting/blob/main/trimspace.png)<br><br>
 
 __2. 讀取雙引號之情況__ <br>
-    當轉為csv檔時，各筆資料會以雙引號做分隔(前後各具有雙引號)。因此我們在讀取匯入的csv檔時，會撰寫一演算法來為了避免雙引號干擾到資料的正確讀取。如果遇到雙引號時，會從第一個雙引號一直讀取資料到第二個雙引號之前。演算法如下：<br><br>
+當轉為csv檔時，各筆資料會以雙引號做分隔(前後各具有雙引號)。因此我們在讀取匯入的csv檔時，會撰寫一演算法來為了避免雙引號干擾到資料的正確讀取。如果遇到雙引號時，會從第一個雙引號一直讀取資料到第二個雙引號之前。演算法如下：<br><br>
 ![圖七](https://github.com/HalladayChen/About-Sorting/blob/main/%E9%87%9D%E5%B0%8D%E9%9B%99%E5%BC%95%E8%99%9F%E7%9A%84%E6%BC%94%E7%AE%97%E6%B3%95.png)
 
 __3. CompareString__ <br>
-    當我們匯入資料後，為了去比較每一筆資料的字首以便排序，我們會利用到ASCII code表，並採用此演算法回傳兩個字串，目的是讓我們可以在以下將會提到的qsort演算法當中使用(比較字首ASCII code大小)。演算法如下：<br><br>
+當我們匯入資料後，為了去比較每一筆資料的字首以便排序，我們會利用到ASCII code表，並採用此演算法回傳兩個字串，目的是讓我們可以在以下將會提到的qsort演算法當中使用(比較字首ASCII code大小)。若a > b，strcmp將會回傳負值；a < b，strcmp將會回傳正值；a = b，strcmp將會回傳0。演算法如下：<br><br>
 ![圖八](https://github.com/HalladayChen/About-Sorting/blob/main/compareString.png)
 
 __4. qsort__ <br>
-最關鍵的部分就是這個演算法。我們將透過**CompareString**當中所比較出的兩字串大小，去做快速排序。原理為選擇一個基準元素(key)，將比基準元素小的元素放在基準元素的左邊，將比基準元素大的元素放在右邊，然後遞歸地對左右兩個子數組進行相同的操作，直到每個子數組都被排出順序為止。演算法如下：<br><br>
+最關鍵的部分就是這個演算法。我們將透過**CompareString**當中比較後的結果，去做快速排序。原理為選擇一個基準元素(key)，將比基準元素小的元素放在基準元素的左邊，將比基準元素大的元素放在右邊，然後遞歸地對左右兩個子數組進行相同的操作，直到每個子數組都被排出順序為止。演算法如下：<br><br>
+![圖九](https://github.com/HalladayChen/About-Sorting/blob/main/qsort.png)
