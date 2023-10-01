@@ -60,10 +60,16 @@ __4. qsort__ <br>
 
 ## About Excel files Uniquing
 Unique演算法主要用途為比較各筆資料，並將相同的資料做刪除。以下為演算法撰寫：<br>
- __1.副程式 - compareUnique__ <br>
- 演算法如下：<br>
- compareUnique的作用是比較前後兩筆資料，若兩相同將會刪除後一筆資料。<br>
- 
+### 副程式 - compareUnique
+演算法如下：<br><br>
+![圖十](https://github.com/HalladayChen/About-Sorting/blob/main/CompareUnique.png)<br><br>
+![圖十](https://github.com/HalladayChen/About-Sorting/blob/main/CompareUnique2.png)<br><br>
+compareUnique的作用是比較前後兩筆資料。若兩筆資料相同，回傳1；反之則回傳0。其中，我們會先以子資料的數量作為判斷依據。<br>
+首先創建兩個暫存矩陣temp，用於儲存第一筆被切割的子資料數。<br>
+接著第一與二個while迴圈的作用為讀取資料，count會記錄該矩陣當中存取了多少筆子資料，並存在token這個變數當中。<br>
+然後當兩個矩陣當中都已存入資料時，進入if判斷count是否相同，若不相同將進入下一個while迴圈，去逐步比較各筆子資料的內容，當有任意一項不相同，即會回傳0。<br><br>
+
+
 
 
 
