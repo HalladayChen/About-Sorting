@@ -40,6 +40,7 @@ output_file則作為檔名為'多媒體相關的研討會'的csv檔。<br>
 接著，讀取input_file並將資料存至變數df。<br>
 最後，再利用df.to_csv將載入的檔案轉為csv檔，print可顯示檔案已被轉檔成功。
 
-
-
+## About Excel files Sorting
+有關sorting的部分會包含以下幾種關鍵演算法：
+__1. 
 
