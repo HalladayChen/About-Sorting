@@ -22,7 +22,7 @@ file_name_without_extention可將excel檔的格式去除，這樣在載入資料
 *註：曾嘗試使用openxysl函式庫當中的sheet.max_row來讀取資料，但我們發現可能會造成多讀取的狀況，因此採用while迴圈來處理該問題。*<br><br>
 最後，在while迴圈當中所載入的資料數，即可作為第三個for迴圈當中的範圍值，將該先前所讀取到的檔名，依序載入到'資料貢獻組別'這個欄位當中，print即可確認檔名是否已被載入。
 
-### Part2:將各組資料利用矩陣方式載入並排序轉檔
+### Part2:將各組資料利用矩陣方式載入並轉成excel檔
 第二部分程式碼如下：<br><br>
 ![圖三](https://github.com/HalladayChen/About-Sorting/blob/main/image4.png)<br><br>
 ![圖四](https://github.com/HalladayChen/About-Sorting/blob/main/image5.png)<br><br>
@@ -31,5 +31,15 @@ file_name_without_extention可將excel檔的格式去除，這樣在載入資料
 pd.read_excel會將資料依序讀取至sheet1、2當中；pd.concat則會將讀取到的資料分別存至兩個矩陣當中。<br>
 待for迴圈執行完畢後，最後再將兩個sheet矩陣當中的內容，利用sheet_df.to_excel轉成excel檔。
 
-### Part3:將轉出的excel檔轉為csv檔
+### Part3:將轉出的excel檔再轉為csv檔
 第三部分程式碼如下：<br><br>
+![圖五](https://github.com/HalladayChen/About-Sorting/blob/main/image6.png)<br><br>
+最後一個部分，我們即可將剛才所轉出的資料轉為csv檔。<br>
+input_file為剛剛所轉出的excel檔。<br>
+output_file則作為檔名為'多媒體相關的研討會'的csv檔。<br>
+接著，讀取input_file並將資料存至變數df。<br>
+最後，再利用df.to_csv將載入的檔案轉為csv檔，print可顯示檔案已被轉檔成功。
+
+
+
+
