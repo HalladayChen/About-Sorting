@@ -47,5 +47,5 @@ __1. trimspace__ <br>
 ![圖六](https://github.com/HalladayChen/About-Sorting/blob/main/trimspace.png)
 
 __2. 讀取雙引號之情況__ <br>
-當我們在讀取資料時，
+當轉為csv檔時，各筆資料會以雙引號做分隔(前後各具有雙引號)。因此我們在讀取匯入的csv檔時，會撰寫一演算法來為了避免雙引號干擾到資料的正確讀取。如果遇到雙引號時，會從第一個雙引號一直讀取資料到第二個雙引號之前。
 
