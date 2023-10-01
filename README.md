@@ -23,5 +23,8 @@ file_name_without_extention可將excel檔的格式去除，這樣在載入資料
 最後，在while迴圈當中所載入的資料數，即可作為第三個for迴圈當中的範圍值，將該先前所讀取到的檔名，依序載入到'資料貢獻組別'這個欄位當中，print即可確認檔名是否已被載入。
 
 ### Part2:將各組excel資料利用矩陣方式載入
-第二部分程式碼如下：
-
+第二部分程式碼如下：<br><br>
+![圖三](https://github.com/HalladayChen/About-Sorting/blob/main/image4.png)<br><br>
+![圖四](https://github.com/HalladayChen/About-Sorting/blob/main/image5.png)<br><br>
+for迴圈會執行8次，因為我們所讀取進的資料總共有8組。<br>
+接著，我們將利用pandas函式庫的內容，
