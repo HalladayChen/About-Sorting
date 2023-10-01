@@ -22,9 +22,14 @@ file_name_without_extention可將excel檔的格式去除，這樣在載入資料
 *註：曾嘗試使用openxysl函式庫當中的sheet.max_row來讀取資料，但我們發現可能會造成多讀取的狀況，因此採用while迴圈來處理該問題。*<br><br>
 最後，在while迴圈當中所載入的資料數，即可作為第三個for迴圈當中的範圍值，將該先前所讀取到的檔名，依序載入到'資料貢獻組別'這個欄位當中，print即可確認檔名是否已被載入。
 
-### Part2:將各組excel資料利用矩陣方式載入
+### Part2:將各組資料利用矩陣方式載入並排序轉檔
 第二部分程式碼如下：<br><br>
 ![圖三](https://github.com/HalladayChen/About-Sorting/blob/main/image4.png)<br><br>
 ![圖四](https://github.com/HalladayChen/About-Sorting/blob/main/image5.png)<br><br>
-for迴圈會執行8次，因為我們所讀取進的資料總共有8組。<br>
-接著，我們將利用pandas函式庫的內容，
+首先，創建兩個sheet(sheet1、sheet2)，以便將各組的產業及研討會資料作區別。for迴圈將會執行8次，因為我們所讀取進的資料總共有8組。<br>
+接著，我們將利用pandas函式庫的內容做讀取與存取。<br>
+pd.read_excel會將資料依序讀取至sheet1、2當中；pd.concat則會將讀取到的資料分別存至兩個矩陣當中。<br>
+待for迴圈執行完畢後，最後再將兩個sheet矩陣當中的內容，利用sheet_df.to_excel轉成excel檔。
+
+### Part3:將轉出的excel檔轉為csv檔
+第三部分程式碼如下：<br><br>
