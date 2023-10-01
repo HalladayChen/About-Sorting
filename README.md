@@ -2,8 +2,8 @@
 ## About Excel files transfer into csv files
 ### Part1: 新增資料貢獻組別欄位
 我們第一個目的是要先在新的column當中，增加一個**資料貢獻組別**的欄位，以便辨識是哪一組貢獻的資料。<br> 第一部分程式碼如下圖：<br><br>
-![圖一](https://github.com/HalladayChen/About-Sorting/blob/main/image1.png)<br><br>
-![圖二](https://github.com/HalladayChen/About-Sorting/blob/main/image2.png)<br><br>
+![圖一](https://github.com/HalladayChen/About-Sorting/blob/main/1.png)<br><br>
+![圖二](https://github.com/HalladayChen/About-Sorting/blob/main/2.png)<br><br>
 __1. 初始化__
 
 首先，先import各項函式庫，如pandas、openpyxl，以方便我們對excel資料的處理。<br>
