@@ -34,7 +34,7 @@ pd.read_excel會將資料依序讀取至sheet1、2當中；pd.concat則會將讀
 ### Part3:將轉出的excel檔再轉為csv檔
 第三部分程式碼如下：<br><br>
 ![圖五](https://github.com/HalladayChen/About-Sorting/blob/main/image6.png)<br><br>
-最後一個部分，我們即可將剛才所轉出的資料轉為csv檔。<br>
+最後一個部分，我們將會把剛才所轉出的資料轉為csv檔。<br>
 input_file為剛剛所轉出的excel檔。<br>
 output_file則作為檔名為'多媒體相關的研討會'的csv檔。<br>
 接著，讀取input_file並將資料存至變數df。<br>
