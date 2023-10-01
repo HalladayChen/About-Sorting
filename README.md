@@ -47,7 +47,7 @@ __1. trimspace__ <br>
 ![圖六](https://github.com/HalladayChen/About-Sorting/blob/main/trimspace.png)<br><br>
 
 __2. 讀取雙引號之情況__ <br>
-當轉為csv檔時，各筆資料會以雙引號做分隔(前後各具有雙引號)。因此我們在讀取匯入的csv檔時，會撰寫一演算法來為了避免雙引號干擾到資料的正確讀取。如果遇到雙引號時，會從第一個雙引號一直讀取資料到第二個雙引號之前。演算法如下：<br><br>
+當轉為csv檔時，各筆子資料會以逗號做分隔。但若子資料當中具有逗號的話，存在於其中的逗號前後會以雙引號標記。因此我們在讀取匯入的csv檔時，會撰寫一演算法來為了避免雙引號干擾到資料的正確讀取。如果遇到雙引號時，會從第一個雙引號，持續讀取資料到第二個雙引號之前。演算法如下：<br><br>
 ![圖七](https://github.com/HalladayChen/About-Sorting/blob/main/%E9%87%9D%E5%B0%8D%E9%9B%99%E5%BC%95%E8%99%9F%E7%9A%84%E6%BC%94%E7%AE%97%E6%B3%95.png)
 
 __3. CompareString__ <br>
@@ -57,3 +57,14 @@ __3. CompareString__ <br>
 __4. qsort__ <br>
 最關鍵的部分就是這個演算法。我們將透過**CompareString**當中比較後的結果，去做快速排序。原理為選擇一個基準元素(key)，將比基準元素小的元素放在基準元素的左邊，將比基準元素大的元素放在右邊，然後遞歸地對左右兩個子數組進行相同的操作，直到每個子數組都被排出順序為止。演算法如下：<br><br>
 ![圖九](https://github.com/HalladayChen/About-Sorting/blob/main/qsort.png)
+
+## About Excel files Uniquing
+Unique演算法主要用途為比較各筆資料，並將相同的資料做刪除。以下為演算法撰寫：<br>
+ __1.副程式 - compareUnique__ <br>
+ 演算法如下：<br>
+ compareUnique的作用是比較前後兩筆資料，若兩相同將會刪除後一筆資料。<br>
+ 
+
+
+
+
