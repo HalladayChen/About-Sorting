@@ -41,6 +41,8 @@ output_file則作為檔名為'多媒體相關的研討會'的csv檔。<br>
 最後，再利用df.to_csv將載入的檔案轉為csv檔，print可顯示檔案已被轉檔成功。
 
 ## About Excel files Sorting
-有關sorting的部分會包含以下幾種關鍵演算法：
-__1. 
+有關sorting的部分會包含以下幾種關鍵演算法：<br>
+__1. trimspace__
+當我們在讀取所轉好的csv檔時，資料載入後有時會出現空格。因此我們利用trimspace將空格清出。演算法如下：<br>
+
 
