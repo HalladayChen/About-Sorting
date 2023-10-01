@@ -72,7 +72,7 @@ compareUnique的作用是比較前後兩筆資料。若兩筆資料相同，回�
 
 ### 主程式
 演算法如下：<br><br>
-![圖十二](https://github.com/HalladayChen/About-Sorting/blob/main/main_function.png)
+![圖十二](https://github.com/HalladayChen/About-Sorting/blob/main/main_function.png)<br><br>
 首先創建兩個暫存矩陣temp，result矩陣儲存將要比對的資料；temp1矩陣儲存原本的資料，以免被覆寫。<br>
 for迴圈將會逐步比對前五筆子資料是否相同。其中，會利用strcpy去複製原始資料以及欲比對資料至暫存矩陣當中。<br>
 最後進入if判斷，如果兩筆資料相同，將會刪除欲比對的資料，並保留原始資料。
