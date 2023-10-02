@@ -86,7 +86,7 @@ __3. 利用C做Uniquing__ <br>
 __4. 利用Markdown製作報告__ <br>
 
 以下為各組員分工占比：<br>
-
+![圖十三](https://github.com/HalladayChen/About-Sorting/blob/main/proportion.png)
 
 
 
