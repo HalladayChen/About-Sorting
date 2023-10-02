@@ -64,17 +64,29 @@ Unique演算法主要用途為比較各筆資料，並將相同的資料做刪�
 演算法如下：<br><br>
 ![圖十](https://github.com/HalladayChen/About-Sorting/blob/main/CompareUnique.png)<br><br>
 ![圖十一](https://github.com/HalladayChen/About-Sorting/blob/main/CompareUnique2.png)<br><br>
-compareUnique的作用是比較前後兩筆資料。若兩筆資料相同，回傳1；反之則回傳0。其中，我們會先以子資料的數量作為判斷依據。<br>
-首先創建兩個暫存矩陣temp，用於儲存第一筆被切割的子資料數。<br>
-接著第一與二個while迴圈的作用為讀取資料，count會記錄該矩陣當中存取了多少筆子資料，並存在token這個變數當中。<br>
-然後當兩個矩陣當中都已存入資料時，進入if判斷count是否相同，若不相同將進入下一個while迴圈，去逐步比較各筆子資料的內容，當有任意一項不相同，即會回傳0。<br><br>
-其中，我們只會比對前五項子資料(至倒數前兩項)，因此while迴圈當中的範圍為count-2。
+compareUnique的作用是比較前後兩筆資料。若兩筆資料相同，回傳1；反之則回傳0。由於我們在這中間未處理在單項資料中有額外的","出現的問題，所以每筆資料若使用","分割的子資料數量會不同，因此我們會先以子資料的數量作為判斷依據。<br>
+首先創建token，用於指向切割後的子資料。另外創建兩個初始矩陣temp，分別用於依次儲存切割後的子資料。<br>
+接著第一與二個while迴圈的作用為讀取資料，count會記錄該矩陣當中存取了多少筆子資料，用於比對子資料數量是否相同。<br>
+然後當子資料數量相同，我們將進入第三個while迴圈，作用為從兩筆資料的第一個子資料開始依次比對，其中max_count代表"資訊貢獻者"這個column前面總共有多少個子資料，因此我們只會比對到"資訊貢獻者"前，這邊使用strcmp來比對子資料是否一樣，若這些子資料都相同的話這個function會回傳1，反之則會回傳0。<br><br>
+其中，我們只會比對扣除掉倒數兩項的子資料(也就是前五項資料)，因此while迴圈當中的範圍為count-2。
 
 ### 主程式
 演算法如下：<br><br>
 ![圖十二](https://github.com/HalladayChen/About-Sorting/blob/main/main_function.png)<br><br>
-首先創建兩個暫存矩陣temp，result矩陣儲存將要比對的資料；temp1矩陣儲存原本的資料，以免被覆寫。<br>
-for迴圈將會逐步比對前五筆子資料是否相同。其中，會利用strcpy去複製原始資料以及欲比對資料至暫存矩陣當中。<br>
-最後進入if判斷，如果兩筆資料相同，將會刪除欲比對的資料，並保留原始資料。
+首先創建兩個暫存矩陣temp，result矩陣儲存unique後(即刪除重複行)的資料；temp1矩陣儲存原本的資料，用於compareUnique當中進行切割，以免原始資料被切割後的資料覆寫。<br>
+for迴圈將會逐步比對此筆資料與前五筆子資料是否相同。其中，會利用strcpy去複製原始資料以及欲比對資料至暫存矩陣當中。<br>
+最後進入if判斷，如果兩筆資料相同，將會刪除欲比對的資料，並保留原始資料，將其存入resultRow中。為了處理可能有很多筆資料相似的情況，我們使用while迴圈檢查是否下一筆資料依舊是重複的，若有重複，則會繼續判斷下一筆資料，且不保留本筆資料。<br>
+其中，k用於判斷resultRow已經寫入至第k行。
+
+## Proportion of Work Division
+共分為四個項目：<br><br>
+__1. 利用python將excel檔轉為csv檔__ <br>
+__2. 利用C做Sorting__ <br>
+__3. 利用C做Uniquing__ <br>
+__4. 利用Markdown製作報告__ <br>
+
+以下為各組員分工占比：<br>
+
+
 
 
