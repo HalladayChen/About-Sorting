@@ -79,11 +79,13 @@ for迴圈將會逐步比對此筆資料與前五筆子資料是否相同。其�
 其中，k用於判斷resultRow已經寫入至第k行。
 
 ## Proportion of Work Division
-共分為四個項目：<br><br>
+共分為五個項目：<br><br>
 __1. 利用python將excel檔轉為csv檔__ <br>
 __2. 利用C做Sorting__ <br>
 __3. 利用C做Uniquing__ <br>
 __4. 利用Markdown製作報告__ <br>
+__5. Debug__ <br>
+
 
 以下為各組員分工占比：<br>
 ![圖十三](https://github.com/HalladayChen/About-Sorting/blob/main/proportion.png)
