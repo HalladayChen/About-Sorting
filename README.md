@@ -88,7 +88,7 @@ __5. Debug__ <br>
 
 
 以下為各組員分工占比：<br>
-![圖十三](https://github.com/HalladayChen/About-Sorting/blob/main/proportion1.png)
+![圖十三](https://github.com/HalladayChen/About-Sorting/blob/main/proportion2.png)
 
 
 
